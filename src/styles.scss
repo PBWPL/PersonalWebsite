@@ -1,7 +1,9 @@
 @use '@angular/material' as mat;
 @use '@angular/material/theming';
 
-@include mat.core();
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 $primary-palette: (
   50: #fafafa,
@@ -110,14 +112,15 @@ $personal-website-typography: mat.define-typography-config(
   $font-family: 'Nunito, sans-serif'
 );
 
+@include mat.core($personal-website-typography);
+
 $personal-website-light-theme: mat.define-light-theme(
   (
     color: (
       primary: $personal-website-light-primary,
       accent: $personal-website-light-accent,
       warn: $personal-website-light-warn
-    ),
-    typography: $personal-website-typography
+    )
   )
 );
 
