@@ -1,0 +1,24 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  > li {
+    padding-right: 10px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+}

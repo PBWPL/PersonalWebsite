@@ -1,0 +1,23 @@
+<header>
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <ul role="navigation">
+        <li><a href="#" title="Link1"> Link1 </a></li>
+        <li><a href="#" title="Link2"> Link2 </a></li>
+        <li><a href="#" title="Link3"> Link3 </a></li>
+      </ul>
+      <div class="spacer"></div>
+      <span i18n="@@hello">Welcome</span>
+      <div class="spacer"></div>
+      <button mat-icon-button aria-label="select language button" [matMenuTriggerFor]="langmenu">
+        <mat-icon>language</mat-icon>
+      </button>
+      <mat-menu #langmenu="matMenu">
+        <a class="lang" mat-menu-item *ngFor="let language of languages" href="/{{ language.code }}/">
+          <mat-icon svgIcon="lang_{{ language.code }}"></mat-icon>
+          <span>{{ language.label }}</span>
+        </a>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>

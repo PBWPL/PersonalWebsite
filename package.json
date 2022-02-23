@@ -3,14 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration=en",
+    "start-pl": "ng serve --configuration=pl",
+    "start-de": "ng serve --configuration=de",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run personal-website:serve-ssr",
-    "serve:ssr": "node dist/personal-website/server/main.js",
-    "build:ssr": "ng build && ng run personal-website:server",
-    "prerender": "ng run personal-website:prerender"
+    "serve:ssr": "node dist/personal-website/proxy-server.js",
+    "build:ssr": "ng build && ng run personal-website:server && cp proxy-server.js dist/personal-website",
+    "prerender": "ng run personal-website:prerender",
+    "i18n": "ng extract-i18n && xliffmerge --profile xliffmerge.json"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +50,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ngx-i18nsupport": "^0.17.1",
     "typescript": "~4.5.2"
   }
 }

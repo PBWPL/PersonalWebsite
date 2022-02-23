@@ -1,4 +1,136 @@
+@use '@angular/material' as mat;
+@use '@angular/material/theming';
+
+@include mat.core();
+
+$primary-palette: (
+  50: #fafafa,
+  100: #f2f2f2,
+  200: #eaeaea,
+  300: #e1e1e1,
+  400: #dadada,
+  500: #d4d4d4,
+  600: #cfcfcf,
+  700: #c9c9c9,
+  800: #c3c3c3,
+  900: #b9b9b9,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #fffbfb,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: rgba(black, 0.87),
+    700: rgba(black, 0.87),
+    800: rgba(black, 0.87),
+    900: rgba(black, 0.87),
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: rgba(black, 0.87)
+  )
+);
+
+$accent-palette: (
+  50: #eeeeee,
+  100: #d5d5d5,
+  200: #b9b9ba,
+  300: #9c9c9e,
+  400: #878789,
+  500: #727274,
+  600: #6a6a6c,
+  700: #5f5f61,
+  800: #555557,
+  900: #424244,
+  A100: #7c8ff2,
+  A200: #4560ec,
+  A400: #183eff,
+  A700: #0931ff,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: white,
+    A400: white,
+    A700: white
+  )
+);
+
+$warn-palette: (
+  50: #ffe5e5,
+  100: #ffbebe,
+  200: #ff9393,
+  300: #ff6868,
+  400: #ff4747,
+  500: #ff2727,
+  600: #ff2323,
+  700: #ff1d1d,
+  800: #ff1717,
+  900: #ff0e0e,
+  A100: #ffeff1,
+  A200: #ffb1bc,
+  A400: #ff98a7,
+  A700: #ff8999,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: rgba(black, 0.87)
+  )
+);
+
+$personal-website-light-primary: mat.define-palette($primary-palette, 500);
+$personal-website-light-accent: mat.define-palette($accent-palette, A200, A100, A400);
+$personal-website-light-warn: mat.define-palette($warn-palette);
+
+$personal-website-typography: mat.define-typography-config(
+  $font-family: 'Nunito, sans-serif'
+);
+
+$personal-website-light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $personal-website-light-primary,
+      accent: $personal-website-light-accent,
+      warn: $personal-website-light-warn
+    ),
+    typography: $personal-website-typography
+  )
+);
+
+@include mat.all-component-themes($personal-website-light-theme);
+
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}

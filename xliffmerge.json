@@ -1,0 +1,11 @@
+{
+  "xliffmergeOptions": {
+    "srcDir": "src/i18n",
+    "genDir": "src/i18n",
+    "i18nFile": "messages.en.xlf",
+    "languages": ["pl", "de"],
+    "allowIdChange": false,
+    "autotranslate": false,
+    "apikey": ""
+  }
+}
