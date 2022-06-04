@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  url: 'http://localhost:4200',
+  languages: ['en', 'pl', 'de'],
+  security: {
+    user: '', // TODO: user
+    password: '' // TODO: pass
+  },
+  deeplAPIKey: '' // TODO: IN FUTURE
 };
 
 /*

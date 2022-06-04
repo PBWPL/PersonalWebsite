@@ -1,0 +1,115 @@
+<app-header class="custom-about-header"></app-header>
+<about-matrix *ngIf="isBrowser" [signType]="matrixSignType" [darkTheme]="isDark.getValue()" class="fixed">
+</about-matrix>
+<main>
+  <div (click)="toggleMatrix()" class="relative">
+    <section id="about" class=" pt-80">
+      <div class="absolute top-0 w-full max-w-3xl mx-auto h-96">
+        <picture>
+          <source type="image/webp" srcset="assets/headshot-pb.webp">
+          <img width="200" height="200"
+            class="sticky top-[110px] ml-4 z-[1] w-40 h-40 object-cover object-top rounded-full shadow drop-shadow-sm shadow-primary-800 sm:m-auto"
+            alt="headshot" src="assets/headshot-pb.png" (click)="preventClick($event)" />
+        </picture>
+      </div>
+      <mat-card (click)="preventClick($event)">
+        <div class="pt-20 sm:pt-0">
+          <h2 class="pt-4 sm:pt-0">Introduction</h2>
+          <p>I'm <b>Piotr</b>. I'm a <b>Fullstack Developer</b>.</p>
+          <mat-icon svgIcon="pb-logo" ngClass="pb-logo" class="pb-logo !h-12 !w-auto"></mat-icon>
+          <span class="lines-x"></span>
+          <span class="lines-y"></span>
+          <p class="sm:pt-5">
+            I keep improving my skills in a wide range of web development (<b>Front-end</b>, <b>Back-end</b> and
+            <b>DevOps</b>).
+            So I able to create an application or a website from scratch to deploy its production version on server.
+            I also graduated with a <b>Bachelor of Science degree</b> in <b>Computer Science</b> with a very good grade
+            on my engineering diploma.
+          </p>
+        </div>
+      </mat-card>
+    </section>
+
+    <section id="skills">
+      <mat-card (click)="preventClick($event)">
+        <mat-card-title>
+          <h2>Skills</h2>
+        </mat-card-title>
+        <ul class="knowsAbout">
+          <li class="pb-4">
+            <h3 class="!font-medium !mb-0">Frontend:</h3>
+            <span itemprop="knowsAbout" *ngFor="let frontend of developer.knowsAbout.frontend">{{frontend}}</span>
+          </li>
+          <li class="pb-4">
+            <h3 class="!font-medium !mb-0">Backend:</h3>
+            <span itemprop="knowsAbout" *ngFor="let backend of developer.knowsAbout.backend">{{backend}}</span>
+          </li>
+          <li class="pb-4">
+            <h3 class="!font-medium !mb-0">Devops:</h3>
+            <span itemprop="knowsAbout" *ngFor="let devops of developer.knowsAbout.devops">{{devops}}</span>
+          </li>
+          <li class="pb-4">
+            <h3 class="!font-medium !mb-0">IDEs:</h3>
+            <span itemprop="knowsAbout" *ngFor="let ide of developer.knowsAbout.ides">{{ide}}</span>
+          </li>
+          <li class="pb-4">
+            <h3 class="!font-medium !mb-0">Software:</h3>
+            <span itemprop="knowsAbout" *ngFor="let software of developer.knowsAbout.softwares">{{software}}</span>
+          </li>
+          <li>
+            <h3 class="!font-medium !mb-0">Others:</h3>
+            <span itemprop="knowsAbout" *ngFor="let others of developer.knowsAbout.others">{{others}}</span>
+          </li>
+        </ul>
+        <p class="flex flex-col items-center !mt-4 p-4 border border-solid">
+          <span class="text-center">Day by day, the truth of <cite>Socrates'</cite> statement</span>
+          <q class="py-4 italic text-lg">I know that I know nothing</q>
+          <span class="text-center">confirms to me how much knowledge there is to acquire.</span>
+        </p>
+      </mat-card>
+    </section>
+
+    <section id="education">
+      <mat-card (click)="preventClick($event)">
+        <mat-card-title>
+          <h2>Education</h2>
+        </mat-card-title>
+        <ng-container *ngFor="let education of developer.education; last as last">
+          <div class="flex flex-col sm:flex-wrap sm:flex-row">
+            <h3 class="order-3 !mb-0 sm:text-left sm:order-1 sm:w-1/2">{{education.name}}</h3>
+            <span class="order-1 text-right sm:w-1/2 sm:order-2 sm:mt-1">
+              <time [dateTime]="education.startDate | date: 'yyyy-MM-DD'">
+                {{education.startDate | date:'MMMM yyyy'}}
+              </time>
+              –
+              <time [dateTime]="education.endDate !== undefined ? (education.endDate | date:'yyyy-MM-DD')  : ''">
+                {{education.endDate !== undefined ? (education.endDate | date:'MMMM yyyy') : 'Present'}}
+              </time>
+            </span>
+            <h4 class="order-4 !mb-0 sm:text-left sm:order-3 sm:w-1/2">{{education.role}}</h4>
+            <address class="order-2 text-right mb-3 sm:mb-0 mt-1 sm:order-4 sm:w-1/2">
+              <span>{{education.city}}</span>, <span>{{education.country}}</span>
+            </address>
+            <p class="order-5 !mt-3">
+              {{education.description}}
+            </p>
+          </div>
+          <mat-divider *ngIf="!last" class="!relative !mb-3"></mat-divider>
+        </ng-container>
+      </mat-card>
+    </section>
+
+    <section id="timeline">
+      <mat-card (click)="preventClick($event)" class="!flex flex-col md:items-center md:self-center">
+        <div class="border-4 border-solid bg-accent-800 border-accent-500 md:max-w-xs">
+          <h2 class="!m-0 p-2 text-center">Timeline</h2>
+        </div>
+        <about-timeline [items]="developer.works"></about-timeline>
+        <div class="w-6 h-6 rounded-full bg-accent-800">
+          <mat-icon>access_time</mat-icon>
+        </div>
+      </mat-card>
+    </section>
+  </div>
+</main>
+<app-footer class="custom-about-footer"></app-footer>

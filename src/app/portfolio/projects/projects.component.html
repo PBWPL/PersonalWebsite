@@ -1,0 +1,30 @@
+<div class="max-w-3xl mx-auto pt-32">
+  <section id="projects">
+    <mat-card class="mb-5">
+      <h2 i18n="@@projectsMyProjects">My Projects</h2>
+      <p i18n="@@projectsExplore">Here you can explore some of my individual and team projects.</p>
+      <div class="flex flex-wrap gap-2 justify-center mb-4">
+        <button mat-raised-button attr.aria-label="Select {{tag.name}} tag" *ngFor="let tag of tags" (click)="sort(tag)"
+          [ngClass]="{'selected': tag.isSelected}" matTooltipPosition="below" [matTooltip]="tag.name"
+          class="!rounded-full hover:scale-x-110">
+          <fa-icon [icon]="[tag.iconClasses[0], tag.iconClasses[1]]"></fa-icon>
+        </button>
+      </div>
+      <div class="min-h-[36px] text-center">
+        <button *ngIf="selectedTags.length !== 0" (click)="renderDefaultProjects()" aria-label="clear selected"
+          mat-raised-button class="!rounded-full hover:scale-x-125">
+          <mat-icon color="warn">clear</mat-icon>
+        </button>
+      </div>
+    </mat-card>
+    <ng-container *ngIf="projects">
+      <div class="flex flex-wrap justify-center gap-5">
+        <ng-container *ngFor="let project of projects">
+          <div [id]="project.shortName" class="w-full">
+            <projects-card [project]="project"></projects-card>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </section>
+</div>

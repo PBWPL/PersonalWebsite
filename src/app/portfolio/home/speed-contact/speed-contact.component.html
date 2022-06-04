@@ -1,0 +1,12 @@
+<div *ngIf="state" (click)="toggle()" class="speed-contact-dismiss z-[11]"></div>
+<div class="speed-contact z-[11]">
+  <button mat-fab (click)="toggle()" [attr.aria-label]="state ? 'Hide links' : 'Show links'">
+    <mat-icon [@toggler]="{ value: state }">add</mat-icon>
+  </button>
+  <div [@stagger]="buttons.length" class="speed-contact-items">
+    <a mat-mini-fab *ngFor="let btn of buttons" [matTooltip]="btn.name" [matTooltipPosition]="btn.tooltipPosition"
+      [href]="btn.url" target="_blank" rel="nofollow" [attr.aria-label]="'My ' + btn.name">
+      <fa-icon [icon]="[btn.icon[0], btn.icon[1]]"></fa-icon>
+    </a>
+  </div>
+</div>

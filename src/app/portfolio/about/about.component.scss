@@ -1,0 +1,71 @@
+main {
+  min-height: calc(100vh - 89px);
+}
+
+section {
+  @apply max-w-3xl mx-auto;
+}
+
+.pb-logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-30px, 35px);
+}
+
+.lines-x,
+.lines-y {
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+  }
+}
+
+.lines-x {
+  &::before,
+  &::after {
+    height: 1px;
+  }
+
+  &::before {
+    width: calc(100% - 39px);
+    transform: translate(-22px, 90px);
+    background-image: linear-gradient(to left, #fafafa 90%, transparent 100%);
+  }
+
+  &::after {
+    width: calc(100% - 32px);
+    transform: translate(-16px, 96px);
+    background-image: linear-gradient(to left, #fafafa 85%, transparent 99%);
+  }
+}
+
+.lines-y {
+  &::before,
+  &::after {
+    width: 1px;
+  }
+
+  &::before {
+    height: 75px;
+    background-image: linear-gradient(to top, #fafafa 75%, transparent 100%);
+    transform: translate(-22px, 16px);
+  }
+
+  &::after {
+    height: 81px;
+    background-image: linear-gradient(to top, #fafafa 50%, transparent 90%);
+    transform: translate(-16px, 16px);
+  }
+}
+
+.knowsAbout {
+  li span:not(:last-child) {
+    &::after {
+      content: ', ';
+    }
+  }
+}

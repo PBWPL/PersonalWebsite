@@ -1,0 +1,48 @@
+.speed-contact-dismiss {
+  position: fixed;
+  background-color: rgba(#000, 0.3);
+  inset: 0;
+  transition: 1s;
+}
+
+.speed-contact,
+.speed-contact-items {
+  position: fixed;
+  height: 0;
+  width: 0;
+}
+
+.speed-contact {
+  top: calc(50vh - 28px);
+  right: 56px;
+
+  button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &-items {
+    top: calc(50vh - 100px);
+    right: 104px;
+
+    a {
+      &:nth-child(1) {
+        transform: translate(56px, 16px);
+      }
+      &:nth-child(2) {
+        transform: translate(8px, -8px);
+      }
+
+      &:nth-child(3) {
+        transform: translateX(-8px);
+      }
+
+      &:nth-child(4) {
+        transform: translate(8px, 8px);
+      }
+      &:nth-child(5) {
+        transform: translate(56px, -16px);
+      }
+    }
+  }
+}

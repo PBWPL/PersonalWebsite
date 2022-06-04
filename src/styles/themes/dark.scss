@@ -1,0 +1,100 @@
+@use '@angular/material' as mat;
+@use '../palette' as palette;
+
+$personal-website-dark-primary: mat.define-palette(palette.$primary-palette, 500);
+$personal-website-dark-accent: mat.define-palette(palette.$accent-palette, A200, A100, A400);
+$personal-website-dark-warn: mat.define-palette(palette.$warn-palette);
+
+$personal-website-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $personal-website-dark-primary,
+      accent: $personal-website-dark-accent,
+      warn: $personal-website-dark-warn
+    )
+  )
+);
+
+.dark {
+  @include mat.core-theme($personal-website-dark-theme);
+  @include mat.progress-bar-theme($personal-website-dark-theme);
+  @include mat.toolbar-theme($personal-website-dark-theme);
+  @include mat.menu-theme($personal-website-dark-theme);
+
+  @include mat.card-theme($personal-website-dark-theme);
+  @include mat.chips-theme($personal-website-dark-theme);
+  @include mat.button-theme($personal-website-dark-theme);
+  @include mat.icon-theme($personal-website-dark-theme);
+  @include mat.tooltip-theme($personal-website-dark-theme);
+  @include mat.divider-theme($personal-website-dark-theme);
+
+  @include mat.snack-bar-theme($personal-website-dark-theme);
+
+  // @include mat.all-component-themes($personal-website-dark-theme);
+
+  main {
+    background-color: #a9a9a9;
+  }
+
+  .pb-logo svg g {
+    stroke: #fafafa;
+
+    .pb {
+      fill: #fafafa;
+    }
+  }
+
+  mat-card {
+    background-color: var(--primary-900) !important;
+    mat-card {
+      background-color: var(--accent-800) !important;
+      mat-card {
+        background-color: var(--accent-700) !important;
+      }
+    }
+  }
+
+  app-footer {
+    footer {
+      background-color: #212112;
+      color: #fafafa;
+
+      .pb-logo svg g {
+        .o {
+          fill: #212121;
+        }
+      }
+    }
+  }
+
+  portfolio-about {
+    #about {
+      .headshot {
+        img {
+          @apply shadow-light;
+        }
+      }
+
+      .pb-logo svg g .o {
+        fill: var(--primary-900);
+      }
+    }
+  }
+
+  portfolio-home {
+    .hero-bg {
+      background-position-x: right;
+    }
+
+    h2 {
+      &::after {
+        background-color: #a9a9a9;
+      }
+    }
+
+    #about-me a,
+    button {
+      @apply text-accent-a100;
+    }
+  }
+}

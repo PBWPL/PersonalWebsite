@@ -1,0 +1,35 @@
+<ng-container *ngIf="project">
+  <mat-card class="md:w-[14.66rem]">
+    <mat-card-title-group>
+      <mat-card-title>{{ project.name }}</mat-card-title>
+      <mat-card-subtitle class="text-contrast-a200">
+        <ul>
+          <ng-container *ngFor="let brand of project.techStack | slice: 0:3">
+            <li>
+              <fa-icon [icon]="[brand.iconClasses[0], brand.iconClasses[1]]" [mask]="['fas', 'square']"
+                transform="shrink-6" class="fa-xl"></fa-icon>
+              {{ brand.name }}
+            </li>
+          </ng-container>
+        </ul>
+      </mat-card-subtitle>
+    </mat-card-title-group>
+
+    <mat-card-content>
+      <p class="md:min-h-[60px]">
+        {{ project.description }}
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <a *ngIf="project.sourceUrl" [href]="project.sourceUrl" target="_blank" rel="nofollow" mat-stroked-button
+        class="!px-2">
+        <fa-icon [icon]="[project.techStack[2].iconClasses[0], project.techStack[2].iconClasses[1]]" class="pr-1">
+        </fa-icon>
+        <span i18n="@@homeCardSource">Source Code</span>
+      </a>
+      <a *ngIf="project.previewUrl" [href]="project.previewUrl" target="_blank" rel="nofollow" mat-stroked-button
+        class="!px-2" i18n="@@homeProjectCardPreview">Preview</a>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>

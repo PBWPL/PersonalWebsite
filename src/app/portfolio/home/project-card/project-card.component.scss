@@ -1,0 +1,18 @@
+.mat-chip {
+  border-radius: 50px 10px;
+  min-width: 50px;
+  justify-content: center;
+}
+
+.mat-card {
+  z-index: 0;
+}
+
+.preview {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

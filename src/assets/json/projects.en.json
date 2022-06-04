@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Personal Website",
+    "shortName": "PW",
+    "individual": true,
+    "featured": true,
+    "techStack": [
+      {
+        "name": "Angular",
+        "iconClasses": ["fab", "angular"]
+      },
+      {
+        "name": "SCSS",
+        "iconClasses": ["fab", "sass"]
+      },
+      {
+        "name": "Github",
+        "iconClasses": ["fab", "github"]
+      },
+      {
+        "name": "Tailwind",
+        "iconClasses": ["fas", "wind"]
+      },
+      {
+        "name": "NodeJS",
+        "iconClasses": ["fab", "node-js"]
+      },
+      {
+        "name": "Font Awesome",
+        "iconClasses": ["fab", "font-awesome-flag"]
+      }
+    ],
+    "description": "Personal website with some information about me and my projects.",
+    "sourceUrl": "https://github.com/PBWPL/PersonalWebsite",
+    "previewUrl": "https://becpiotr.dev"
+  },
+  {
+    "name": "Speed Your Net",
+    "shortName": "SYN",
+    "individual": true,
+    "featured": true,
+    "techStack": [
+      {
+        "name": "Angular",
+        "iconClasses": ["fab", "angular"]
+      },
+      {
+        "name": "NodeJS",
+        "iconClasses": ["fab", "node-js"]
+      },
+      {
+        "name": "Github",
+        "iconClasses": ["fab", "github"]
+      },
+      {
+        "name": "SCSS",
+        "iconClasses": ["fab", "sass"]
+      },
+      {
+        "name": "MySQL",
+        "iconClasses": ["fas", "database"]
+      }
+    ],
+    "description": "Application for testing the connection and internet speed.",
+    "previewUrl": "https://speedyournet.becpiotr.dev"
+  },
+  {
+    "name": "Food Config",
+    "shortName": "FC",
+    "individual": true,
+    "featured": true,
+    "techStack": [
+      {
+        "name": "PHP",
+        "iconClasses": ["fab", "php"]
+      },
+      {
+        "name": "Bootstrap",
+        "iconClasses": ["fab", "bootstrap"]
+      },
+      {
+        "name": "Github",
+        "iconClasses": ["fab", "github"]
+      },
+      {
+        "name": "MySQL",
+        "iconClasses": ["fas", "database"]
+      }
+    ],
+    "description": "Application for searching dishes based on the products you have.",
+    "sourceUrl": "https://github.com/PBWPL/FoodConfig"
+  },
+  {
+    "name": "Task Manager",
+    "shortName": "TM",
+    "individual": true,
+    "techStack": [
+      {
+        "name": "JAVA",
+        "iconClasses": ["fab", "java"]
+      },
+      {
+        "name": "Android",
+        "iconClasses": ["fab", "android"]
+      },
+      {
+        "name": "GitHub",
+        "iconClasses": ["fab", "github"]
+      }
+    ],
+    "description": "Task management application for Android.",
+    "sourceUrl": "https://github.com/PBWPL/task-manager"
+  },
+  {
+    "name": "Pachisi AR",
+    "shortName": "PAR",
+    "techStack": [
+      {
+        "name": "Unity",
+        "iconClasses": ["fab", "unity"]
+      },
+      {
+        "name": "Android",
+        "iconClasses": ["fab", "android"]
+      },
+      {
+        "name": "GitLab",
+        "iconClasses": ["fab", "gitlab"]
+      },
+      {
+        "name": "iOS",
+        "iconClasses": ["fab", "apple"]
+      }
+    ],
+    "description": "Pachisi's game based on AR and remote play.",
+    "sourceUrl": "https://gitlab.com/inzynierzy/gra-u-chinczyka"
+  },
+  {
+    "name": "uDomino",
+    "shortName": "uD",
+    "techStack": [
+      {
+        "name": "ASP.NET",
+        "iconClasses": ["fab", "microsoft"]
+      },
+      {
+        "name": "JavaScript",
+        "iconClasses": ["fab", "js-square"]
+      },
+      {
+        "name": "GitLab",
+        "iconClasses": ["fab", "gitlab"]
+      },
+      {
+        "name": "CSS3",
+        "iconClasses": ["fab", "css3"]
+      },
+      {
+        "name": "Bootstrap",
+        "iconClasses": ["fab", "bootstrap"]
+      },
+      {
+        "name": "Font Awesome",
+        "iconClasses": ["fab", "font-awesome-flag"]
+      }
+    ],
+    "description": "Application for managing table reservations in a restaurant.",
+    "sourceUrl": "https://gitlab.com/inzynierzy/restauracja-u-domino"
+  }
+]

@@ -1,0 +1,5 @@
+@use '@angular/material' as mat;
+
+$personal-website-typography: mat.define-typography-config(
+  $font-family: 'Nunito, sans-serif'
+);

@@ -1,23 +1,61 @@
-<header>
-  <mat-toolbar color="accent">
-    <mat-toolbar-row>
-      <ul role="navigation">
-        <li><a href="#" title="Link1"> Link1 </a></li>
-        <li><a href="#" title="Link2"> Link2 </a></li>
-        <li><a href="#" title="Link3"> Link3 </a></li>
-      </ul>
-      <div class="spacer"></div>
-      <span i18n="@@hello">Welcome</span>
-      <div class="spacer"></div>
-      <button mat-icon-button aria-label="select language button" [matMenuTriggerFor]="langmenu">
-        <mat-icon>language</mat-icon>
-      </button>
-      <mat-menu #langmenu="matMenu">
-        <a class="lang" mat-menu-item *ngFor="let language of languages" href="/{{ language.code }}/">
-          <mat-icon svgIcon="lang_{{ language.code }}"></mat-icon>
-          <span>{{ language.label }}</span>
+<header class="fixed w-full custom-header">
+  <mat-progress-bar mode="determinate" [value]="scrollProgress" aria-label="scroll progress"></mat-progress-bar>
+  <mat-toolbar>
+    <mat-toolbar-row class="max-w-3xl mx-auto">
+      <div class="flex h-10 items-center w-1/3">
+        <a (mouseout)="source.srcset='assets/memoji1.webp'; img.src = 'assets/memoji1.png'"
+          (mouseover)="source.srcset='assets/memoji2.webp'; img.src = 'assets/memoji2.png'" routerLink=""
+          aria-label="HOME">
+          <picture>
+            <source #source type="image/webp" srcset="assets/memoji1.webp">
+            <img #img class="memoji absolute lg:-ml-24" width="63" height="83"
+              [ngClass]="{'memoji-small': scrollPos > 100 && windowWidth < 1024}" alt="my memoji"
+              src="assets/memoji1.png" aria-hidden="true" />
+          </picture>
+          <div class="developer pl-16 min-h-[32px] lg:-ml-24">
+            <div class="developer-name">
+              <h1 class="hidden !font-semibold sm:inline-block" itemprop="name">
+                {{ developer.firstName + ' ' + developer.lastName }}
+              </h1>
+              <h1 class="!font-semibold inline-block sm:hidden" itemprop="name">{{ developer.initials }}</h1>
+            </div>
+          </div>
         </a>
-      </mat-menu>
+      </div>
+      <div class="flex justify-center w-1/3">
+        <button mat-icon-button aria-label="Show navigation" [matMenuTriggerFor]="navMenu" class="md:!hidden">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #navMenu="matMenu" class="nav-menu" aria-label="Navigation menu">
+          <a mat-menu-item *ngFor="let item of items" [routerLink]="item.url" routerLinkActive="active"
+            [attr.aria-label]="item.label">
+            <span>{{ item.label }}</span>
+          </a>
+        </mat-menu>
+        <mat-nav-list class="!hidden md:!block">
+          <a mat-button *ngFor="let item of items" [routerLink]="item.url" routerLinkActive="active"
+            [attr.aria-label]="item.label">
+            <span>{{ item.label }}</span>
+          </a>
+        </mat-nav-list>
+      </div>
+      <div class="flex justify-end w-1/3 gap-x-4">
+        <button (click)="changeTheme(currentTheme)" mat-icon-button
+          [attr.aria-label]="'Switch theme to ' + getNextTheme() + ' mode'">
+          <mat-icon>{{ currentTheme + '_mode' }}</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Show languages" [matMenuTriggerFor]="langMenu">
+          <mat-icon>language</mat-icon>
+        </button>
+        <mat-menu #langMenu="matMenu" class="lang-menu" aria-label="Languages menu">
+          <div class="lang-menu">
+            <a mat-menu-item *ngFor="let language of languages" href="/{{ language.code }}/">
+              <mat-icon [svgIcon]="'lang_' + language.code"></mat-icon>
+              <span>{{ language.label }}</span>
+            </a>
+          </div>
+        </mat-menu>
+      </div>
     </mat-toolbar-row>
   </mat-toolbar>
 </header>

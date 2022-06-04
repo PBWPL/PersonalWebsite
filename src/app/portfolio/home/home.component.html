@@ -1,0 +1,144 @@
+<home-speed-contact [links]="developer.links" [event]="eventSubject.asObservable()" class="hidden sm:block">
+</home-speed-contact>
+<div class="hero">
+  <div class="hero-bg">
+    <div class="stars">
+      <div class="small"></div>
+      <div class="medium"></div>
+      <div class="big"></div>
+    </div>
+  </div>
+  <mat-icon svgIcon="web-development" class="!absolute !w-4/5 !h-auto !top-1/4 !-bottom-2/4 !left-[10%]"></mat-icon>
+</div>
+<div class="max-w-3xl mx-auto">
+  <section id="about-me">
+    <mat-card>
+      <mat-card-title>
+        <h2 i18n="@@homeHey">
+          Hey <span role="img" aria-label="waving hand" class="emoji pr-1 inline-block animate-wiggle">👋</span>
+          Glad To Meet You!
+        </h2>
+      </mat-card-title>
+      <ul class="text-sm">
+        <li i18n="@@homeMyName">
+          My name is <b>{{ developer.firstName + ' ' + developer.lastName }}</b> and I'm from
+          <span role="img" aria-label="flag of Poland" class="emoji">🇵🇱</span>
+          <b itemprop="sameAs" itemprop="nationality"> Poland</b>.
+        </li>
+        <li i18n="@@homeProgress" class="pb-3">
+          And this is my personal website - always a work in
+          <fa-icon [icon]="['fas', 'spinner']" [spin]="true" [pulse]="true"></fa-icon> progress.
+        </li>
+        <li i18n="@@homeInterested">
+          I'm interested in almost everything related to <b>IT</b>.
+        </li>
+        <li i18n="@@homeJourney">
+          Well, I'm at the beginning of my journey as
+          <span role="img" attr.aria-label="man technologist" class="emoji">👨🏻‍💻</span>
+          <b itemprop="jobTitle"> {{ developer.jobTitle }}</b>.
+        </li>
+        <li i18n="@@homeFindOut">
+          Here you can find out a bit <b><a routerLink="" fragment="feelings">about me</a></b>
+          and <b><a routerLink="" fragment="projects">my projects</a></b>.
+          Feel free to <button aria-label="Show contact links" (click)="showLinks()"><b>contact me</b></button>.
+        </li>
+      </ul>
+    </mat-card>
+  </section>
+
+  <section id="projects">
+    <mat-card>
+      <mat-card-title>
+        <h2 i18n="@@homeMyProjects">My Projects</h2>
+      </mat-card-title>
+      <div class="flex flex-wrap flex-col gap-4 md:flex-row md:justify-center">
+        <ng-container *ngIf="isBrowser">
+          <ng-container *ngIf="projects$ | async as projects">
+            <ng-container *ngFor="let project of projects">
+              <home-project-card [project]="project"></home-project-card>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+      </div>
+      <div class="text-center pt-8">
+        <a i18n="@@homeSeeMoreProjects" mat-raised-button class="w-full md:w-[14.66rem]" label="See My Work"
+          [routerLink]="portfolioPaths.projects"> See More Projects
+          <mat-icon class="animate-pulse">keyboard_arrow_right</mat-icon>
+        </a>
+      </div>
+    </mat-card>
+  </section>
+
+  <section id="feelings">
+    <mat-card>
+      <mat-card-title>
+        <h2 i18n="@@homeMyFeelings">My Feelings</h2>
+      </mat-card-title>
+      <p i18n="@@homeFoundApp" class="text-justify">
+        I recently found an interesting app that helps me keep a diary of my daily feelings and activities. I send the
+        generated report via Apple Shortcut to the API. This allows me to share my day immediately. Thank you for the
+        idea Eli – if you're reading this I greet you kindly.
+      </p>
+      <div class="mb-3">
+        <ng-container *ngIf="isBrowser">
+          <ng-container *ngIf="feelingsChartData$ | async as feelingsChartData">
+            <home-feelings-chart [data]="feelingsChartData" (feelIndex)="changeFeel($event)">
+            </home-feelings-chart>
+          </ng-container>
+        </ng-container>
+      </div>
+      <mat-card *ngIf="feel" class="!-mx-4 !-mb-4 !rounded-t-none">
+        <div>
+          <mat-card
+            class="h-14 !p-2 !-mx-4 !-mt-4 !rounded-t-none sm:!absolute sm:!rounded-t sm:right-0 sm:top-0 sm:!mr-4">
+            <ul>
+              <li>
+                <span role="img" attr.aria-label="spiral calendar" class="emoji">🗓️</span>
+                {{ feel.full_date | date: 'EEEE, dd/MM/yy'}}
+              </li>
+              <li>
+                <span role="img" attr.aria-label="mantelpiece clock" class="emoji">🕰️</span>
+                {{ feel.full_date | date: 'h:mm aa'}}
+              </li>
+            </ul>
+          </mat-card>
+          <div class="mt-4 sm:-mt-3 pb-4">
+            <h3 class="!text-2xl"><span i18n="@@homeIFelt">I felt {{ feel.mood.name }}! </span>
+              <span role="img" [attr.aria-label]="feel.mood.name" class="emoji">{{ feel.mood.emoji }}</span>
+            </h3>
+            <ul class="flex flex-wrap gap-1">
+              <li *ngFor="let activity of feel.activities" [matTooltip]="activity.name">
+                <span role="img" [attr.aria-label]="activity.name" class="emoji text-xl">{{ activity.emoji }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ng-container *ngIf="feel.note_title || feel.note">
+          <mat-card class="!rounded-none">
+            <div class="text-xl pb-2">{{ feel.note_title }}</div>
+            <div class="note" [innerHTML]="feel.note"></div>
+          </mat-card>
+        </ng-container>
+      </mat-card>
+    </mat-card>
+  </section>
+
+  <section id="spotify">
+    <mat-card>
+      <mat-card-title>
+        <h2 i18n="@@homeMyPlaylist">My playlist</h2>
+      </mat-card-title>
+      <p i18n="@@homeListeningMusic" class="text-justify">
+        Listening to music is one of the things I love, perhaps alongside coding, reading books, playing guitar and an
+        activity I've developed a renewed liking for – running. Any music genre is fine for me as long as the song
+        catches my ear. I invite you to enjoy my playlist. I'm happy to exchange tunes.
+      </p>
+      <div class="!-mx-4 !-mb-4">
+        <iframe title="spotify player" style="border-radius:4px" loading="lazy"
+          src="https://open.spotify.com/embed/playlist/7JlyeQPk3wjDADHfsDJmk0?utm_source=generator" width="100%"
+          height="330" frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    </mat-card>
+  </section>
+</div>

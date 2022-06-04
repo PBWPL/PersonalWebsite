@@ -1,5 +1,18 @@
-<footer class="mat-primary">
-  <div>
-    <span i18n="@@hello">Welcome</span>
+<footer class="relative custom-footer border-t">
+  <div class="flex flex-col-reverse gap-y-2 items-center py-5 max-w-3xl mx-auto sm:flex-row sm:px-4">
+    <div class="flex flex-col gap-y-2 items-center w-1/2 sm:flex-row sm:items-stretch">
+      <mat-icon svgIcon="pb-logo" class="pb-logo !h-12 !w-auto"></mat-icon>
+      <div class="sm:pl-2 sm:border-l sm:flex sm:items-center">
+        <p class="!m-0">© {{ year }}
+          <a [href]="developer.homeUrl">{{developer.firstName + ' ' + developer.lastName}}</a>
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-center w-1/2 gap-2 md:justify-end">
+      <a *ngFor="let social of links" rel="me" mat-stroked-button [href]="social.url" target="_blank" rel="nofollow"
+        [attr.aria-label]="'My ' + social.name" [matTooltip]="social.name">
+        <fa-icon [icon]="[social.icon[0], social.icon[1]]"></fa-icon>
+      </a>
+    </div>
   </div>
 </footer>

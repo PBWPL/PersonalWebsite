@@ -1,0 +1,47 @@
+<ng-container *ngIf="project">
+  <mat-card class="mat-elevation-z4">
+    <mat-card-header>
+      <div mat-card-avatar class="project-avatar border border-solid border-light">
+        <mat-icon mat-card-avatar>
+          {{ project.individual ? 'person' : 'people'}}
+        </mat-icon>
+      </div>
+      <mat-card-title>
+        {{ project.name }}
+      </mat-card-title>
+      <mat-card-subtitle class="text-contrast-a200" i18n="@@projectsCardWork">
+        {{ project.individual ? 'INDIVIDUAL WORK' : 'TEAM WORK' }}
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <div mat-card-image class="preview h-80">
+      <picture>
+        <source type="image/webp" srcset="assets/projects/{{ project.shortName }}.webp">
+        <img width="100" height="50" [alt]="project.name + ' ' + 'screenshot'"
+          src="assets/projects/{{ project.shortName }}.png" class="object-scale-down m-auto" />
+      </picture>
+    </div>
+
+    <mat-card-content>
+      <ul class="flex flex-wrap gap-2">
+        <li *ngFor="let brand of project.techStack" [matTooltip]="brand.name">
+          <fa-icon [icon]="[brand.iconClasses[0], brand.iconClasses[1]]" [mask]="['fas', 'square']" transform="shrink-6"
+            class="fa-2xl"></fa-icon>
+        </li>
+      </ul>
+
+      <p class="pt-6">{{project.description}}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <a *ngIf="project.sourceUrl" [href]="project.sourceUrl" target="_blank" rel="nofollow" mat-stroked-button
+        class="!px-2">
+        <fa-icon [icon]="[project.techStack[2].iconClasses[0], project.techStack[2].iconClasses[1]]" class="pr-1">
+        </fa-icon>
+        <span i18n="@@projectsCardSource">Source Code</span>
+      </a>
+      <a *ngIf="project.previewUrl" [href]="project.previewUrl" target="_blank" rel="nofollow" mat-stroked-button
+        class="!px-2" i18n="@@projectsCardPreview">Preview</a>
+    </mat-card-actions>
+  </mat-card>
+</ng-container>

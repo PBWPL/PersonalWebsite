@@ -1,9 +1,27 @@
 footer {
-  background: #4560ec;
-  color: white;
-  min-height: 64px;
+  z-index: 10;
+}
 
+:host-context(.custom-about-footer) .custom-footer {
+  &,
+  a,
   div {
-    padding: 12px;
+    border-style: dashed;
+    border-color: #00c710;
+  }
+
+  a,
+  p {
+    color: #00c710;
+  }
+
+  *,
+  g {
+    stroke: #00c710 !important;
+    fill: #d22630 !important;
+  }
+
+  mat-icon svg g {
+    stroke: #00c710 !important;
   }
 }

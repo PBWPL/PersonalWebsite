@@ -2,32 +2,271 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template" target-language="de">
     <body>
-      <trans-unit id="hello" datatype="html">
-        <source>Welcome</source><target state="new">Willkommen</target>
+      <trans-unit id="appMessageNoJS" datatype="html">
+        <source>Please enable JavaScript to continue using this application.</source><target state="new">Bitte aktivieren Sie JavaScript, um diese Anwendung weiter nutzen zu können.</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.ts</context><context context-type="linenumber">46</context></context-group></trans-unit>
+      <trans-unit id="appMessageConsoleHaveFun" datatype="html">
+        <source>✨ Have a great day and have fun! ✨</source><target state="new">✨ Ich wünsche Ihnen einen schönen Tag und viel Spaß! ✨</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.ts</context><context context-type="linenumber">56</context></context-group></trans-unit>
+      <trans-unit id="appMessageConsoleQuote" datatype="html">
+        <source>"Whenever possible, steal code" ~ Tom Duff</source><target state="new">"Wann immer möglich, Code stehlen" ~ Tom Duff</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.ts</context><context context-type="linenumber">57</context></context-group></trans-unit><trans-unit id="aboutTitle" datatype="html">
+        <source>About Me</source><target state="new">Über mich</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/header/header.component.html</context>
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit><trans-unit id="feelingsChartFelt" datatype="html">
+        <source>I felt</source><target state="new">Ich fühlte mich</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/home/feelings-chart/feelings-chart.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeHey" datatype="html">
+        <source> Hey <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span role=&quot;img&quot; aria-label=&quot;waving hand&quot; class=&quot;emoji pr-1 inline-block animate-wiggle&quot;>"/>👋<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> Glad To Meet You! </source><target state="new"> Hallo <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span role=&quot;img&quot; aria-label=&quot;waving hand&quot; class=&quot;emoji pr-1 inline-block animate-wiggle&quot;>"/>👋<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/> Schön, Sie kennenzulernen! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/home/home.component.html</context>
+          <context context-type="linenumber">18,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeMyName" datatype="html">
+        <source> My name is <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="INTERPOLATION" equiv-text="me + ' ' + developer.lastName }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> and I'm from <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span role=&quot;img&quot; aria-label=&quot;flag of Poland&quot; class=&quot;emoji&quot;>"/>🇵🇱<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_BOLD_TEXT_1" equiv-text="&lt;b itemprop=&quot;sameAs&quot; itemprop=&quot;nationality&quot;>"/> Poland<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>. </source><target state="new"> Mein Name ist <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/><x id="INTERPOLATION" equiv-text="me + ' ' + developer.lastName }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> und ich komme aus <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span role=&quot;img&quot; aria-label=&quot;flag of Poland&quot; class=&quot;emoji&quot;>"/>🇵🇱<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_BOLD_TEXT_1" equiv-text="&lt;b itemprop=&quot;sameAs&quot; itemprop=&quot;nationality&quot;>"/> Polen<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>. </target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">24</context></context-group></trans-unit>
+      <trans-unit id="homeProgress" datatype="html">
+        <source> And this is my personal website - always a work in <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;['fas', 'spinner']&quot; [spin]=&quot;true&quot; [pulse]=&quot;true&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="progress."/> progress. </source><target state="new"> Und dies ist meine persönliche Website - immer in <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;['fas', 'spinner']&quot; [spin]=&quot;true&quot; [pulse]=&quot;true&quot;>"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="p"/> Arbeit. </target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">29</context></context-group></trans-unit>
+      <trans-unit id="homeInterested" datatype="html">
+        <source> I'm interested in almost everything related to <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>IT<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>. </source><target state="new"> Ich interessiere mich für fast alles, was mit <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>IT<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>. </target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">33</context></context-group></trans-unit>
+      <trans-unit id="homeJourney" datatype="html">
+        <source> Well, I'm at the beginning of my journey as <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span role=&quot;img&quot; attr.aria-label=&quot;man technologist&quot; class=&quot;emoji&quot;>"/>👨🏻‍💻<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b itemprop=&quot;jobTitle&quot;>"/> <x id="INTERPOLATION" equiv-text="{{ developer.jobTitle }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text=".
+        &lt;/li"/>. </source><target state="new"> Also, ich bin noch am Anfang meiner Reise als <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span role=&quot;img&quot; attr.aria-label=&quot;man technologist&quot; class=&quot;emoji&quot;>"/>👨🏻‍💻<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b itemprop=&quot;jobTitle&quot;>"/> <x id="INTERPOLATION" equiv-text="{{ developer.jobTitle }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text=".
+        &lt;/li"/>. </target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">36</context></context-group></trans-unit>
+      <trans-unit id="homeFindOut" datatype="html">
+        <source> Here you can find out a bit <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="contact me&lt;/b>&lt;/bu"/><x id="START_LINK" ctype="x-a" equiv-text="gment=&quot;feelings&quot;>"/>about me<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> and <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="contact me&lt;/b>&lt;/bu"/><x id="START_LINK_1" equiv-text="gment=&quot;projects&quot;>"/>my projects<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>. Feel free to <x id="START_TAG_BUTTON" ctype="x-button" equiv-text="&lt;button aria-label=&quot;Show contact links&quot; (click)=&quot;showLinks()&quot;>"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="contact me&lt;/b>&lt;/bu"/>contact me<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/><x id="CLOSE_TAG_BUTTON" ctype="x-button" equiv-text=".
+        &lt;"/>. </source><target state="new"> Hier können Sie ein bisschen <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="contact me&lt;/b>&lt;/bu"/><x id="START_LINK" ctype="x-a" equiv-text="gment=&quot;feelings&quot;>"/>über mich<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> und <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="contact me&lt;/b>&lt;/bu"/><x id="START_LINK_1" equiv-text="gment=&quot;projects&quot;>"/>meine Projekte<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a>"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>. Sie können mich frei <x id="START_TAG_BUTTON" ctype="x-button" equiv-text="&lt;button aria-label=&quot;Show contact links&quot; (click)=&quot;showLinks()&quot;>"/><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="contact me&lt;/b>&lt;/bu"/>kontaktieren<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/><x id="CLOSE_TAG_BUTTON" ctype="x-button" equiv-text=".
+        &lt;"/>. </target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">41</context></context-group></trans-unit>
+      <trans-unit id="homeMyProjects" datatype="html">
+        <source>My Projects</source><target state="new">Meine Projekte</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">52</context></context-group></trans-unit>
+      <trans-unit id="homeSeeMoreProjects" datatype="html">
+        <source> See More Projects <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;animate-pulse&quot;>"/>keyboard_arrow_right<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon>"/></source><target state="new"> Mehr Projekte sehen <x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;animate-pulse&quot;>"/>keyboard_arrow_right<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon>"/></target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">65</context></context-group></trans-unit>
+      <trans-unit id="homeMyFeelings" datatype="html">
+        <source>My Feelings</source><target state="new">Meine Gefühle</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">75</context></context-group></trans-unit>
+      <trans-unit id="homeFoundApp" datatype="html">
+        <source> I recently found an interesting app that helps me keep a diary of my daily feelings and activities. I send the generated report via Apple Shortcut to the API. This allows me to share my day immediately. Thank you for the idea Eli – if you're reading this I greet you kindly. </source><target state="new"> Ich habe kürzlich eine interessante App gefunden, die mir hilft, ein Tagebuch über meine täglichen Gefühle und Aktivitäten zu führen. Ich sende den erstellten Bericht per Apple Shortcut an die API. So kann ich meinen Tag sofort mit anderen teilen. Vielen Dank für die Idee, Eli - falls Sie dies lesen, grüße ich Sie herzlich. </target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">78</context></context-group></trans-unit>
+      <trans-unit id="homeIFelt" datatype="html">
+        <source>I felt <x id="INTERPOLATION" equiv-text="{{ feel.mood.name }}"/>! </source><target state="new">Ich fühlte mich <x id="INTERPOLATION" equiv-text="{{ feel.mood.name }}"/>! </target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">106</context></context-group></trans-unit>
+      <trans-unit id="homeMyPlaylist" datatype="html">
+        <source>My playlist</source><target state="new">Meine Playlist</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">129</context></context-group></trans-unit>
+      <trans-unit id="homeListeningMusic" datatype="html">
+        <source> Listening to music is one of the things I love, perhaps alongside coding, reading books, playing guitar and an activity I've developed a renewed liking for – running. Any music genre is fine for me as long as the song catches my ear. I invite you to enjoy my playlist. I'm happy to exchange tunes. </source><target state="new"> Musik zu hören gehört zu den Dingen, die ich liebe, vielleicht neben dem Programmieren, dem Lesen von Büchern, dem Gitarrenspiel und einer Aktivität, für die ich eine neue Vorliebe entwickelt habe - dem Laufen. Jedes Musikgenre ist für mich in Ordnung, solange das Lied mein Ohr fesselt. Ich lade Sie ein, meine Playlist zu genießen, und freue mich über den Austausch von Musikstücken. </target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">132</context></context-group></trans-unit><trans-unit id="homeCardSource" datatype="html">
+        <source>Source Code</source><target state="new">Quellcode</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/home/project-card/project-card.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit><trans-unit id="homeProjectCardPreview" datatype="html">
+        <source>Preview</source><target state="new">Vorschau</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/home/project-card/project-card.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit><trans-unit id="projectsCardWork" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{ project.individual ? 'INDIVIDUAL WORK' : 'TEAM WORK' }}"/> </source><target state="new"> <x id="INTERPOLATION" equiv-text="{{ project.individual ? 'INDIVIDUAL WORK' : 'TEAM WORK' }}"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit><trans-unit id="projectsCardSource" datatype="html">
+        <source>Source Code</source><target state="new">Quellcode</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit><trans-unit id="projectsCardPreview" datatype="html">
+        <source>Preview</source><target state="new">Vorschau</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit><trans-unit id="projectsMyProjects" datatype="html">
+        <source>My Projects</source><target state="new">Meine Projekte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/projects/projects.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit><trans-unit id="projectsExplore" datatype="html">
+        <source>Here you can explore some of my individual and team projects.</source><target state="new">Hier können Sie einige meiner Einzel- und Team-Projekte entdecken.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/projects/projects.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="en" datatype="html">
+      
+      
+      <trans-unit id="projectsMessageMoreSoon" datatype="html">
+        <source>More of my work will 🚀 land here soon.</source><target state="new">Mehr von meiner Arbeit wird bald hier 🚀 landen.</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/projects/projects.component.ts</context><context context-type="linenumber">43</context></context-group></trans-unit><trans-unit id="projectsTitle" datatype="html">
+        <source>Projects</source><target state="new">Projekte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/projects/projects.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="headerLangEnglish" datatype="html">
         <source>English</source><target state="new">Englisch</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/header/header.component.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="pl" datatype="html">
+      <trans-unit id="headerLangPolish" datatype="html">
         <source>Polish</source><target state="new">Polnisch</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/header/header.component.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="de" datatype="html">
+      <trans-unit id="headerLangGerman" datatype="html">
         <source>German</source><target state="new">Deutsch</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/header/header.component.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="headerLabelAboutMe" datatype="html">
+        <source>ABOUT ME</source><target state="new">ÜBER MICH</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="headerLabelProjects" datatype="html">
+        <source>PROJECTS</source><target state="new">PROJEKTE</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/header/header.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="seoDefaultTitle" datatype="html">
+        <source>Peter Bec</source><target state="new">Peter Bec</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/services/seo.service.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seoDefaultDesc" datatype="html">
+        <source>
+  Peter Bec is a Fullstack Developer who improves his skills in a wide range of
+  web development (Front-end, Back-end, DevOps). When he isn't coding,
+  he listens to music, reads books, plays guitar or runs.</source><target state="new">Peter Bec ist ein Fullstack Developer, der seine Fähigkeiten in einem breiten Spektrum der
+  Web-Entwicklung (Front-End, Back-End, DevOps). Wenn er nicht gerade programmiert,
+  hört er Musik, liest Bücher, spielt Gitarre oder läuft.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/services/seo.service.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="developerFirstName" datatype="html">
+        <source>Peter</source><target state="new">Peter</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context><context context-type="linenumber">2</context></context-group></trans-unit>
+      <trans-unit id="developerLastName" datatype="html">
+        <source>Bec</source><target state="new">Bec</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context><context context-type="linenumber">3</context></context-group></trans-unit><trans-unit id="workOneName" datatype="html">
+        <source>Elokom GmbH (Summer Job)</source><target state="new">Elokom GmbH (Ferienjob)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit><trans-unit id="workOneCountry" datatype="html">
+        <source>Germany</source><target state="new">Deutschland</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit><trans-unit id="workOneRole" datatype="html">
+        <source>Helper</source><target state="new">Helfer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit><trans-unit id="workOneDescription" datatype="html">
+        <source>terminating and testing network cables</source><target state="new">Abschluss und Prüfung von Netzwerkkabeln</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit><trans-unit id="workTwoCity" datatype="html">
+        <source>Cracow</source><target state="new">Krakau</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit><trans-unit id="workTwoCountry" datatype="html">
+        <source>Poland</source><target state="new">Polen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit><trans-unit id="workTwoDescription" datatype="html">
+        <source>bug fixing, adding features, code refactoring, customer service</source><target state="new">Fehlerbehebung, Hinzufügen von Funktionen, Code-Refactoring, Kundendienst</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit><trans-unit id="educationOneName" datatype="html">
+        <source>State University of Applied Sciences</source><target state="new">State University of Applied Sciences</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit><trans-unit id="educationOneCity" datatype="html">
+        <source>Nowy Sacz</source><target state="new">Nowy Sacz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit><trans-unit id="educationOneCountry" datatype="html">
+        <source>Poland</source><target state="new">Polen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit><trans-unit id="educationOneDescription" datatype="html">
+        <source>I graduated with a Bachelor of Science degree in Computer Science.</source><target state="new">Ich habe einen Bachelor of Science in Informatik erworben.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/datas/developer.data.ts</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
     </body>
