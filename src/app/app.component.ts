@@ -36,6 +36,7 @@ export class AppComponent implements OnInit {
       this.seoService.setTitle();
       this.seoService.setMetaData();
       this.seoService.setJsonLd(this.renderer);
+      this.seoService.setGoogleAnalytics(this.renderer);
       this.pwaService.setPWAData();
     }
 

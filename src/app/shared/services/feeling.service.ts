@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '@environments/environment';
 import { map, catchError, EMPTY } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { Feeling } from '../interfaces/feeling';
@@ -11,7 +12,7 @@ export class FeelingService {
   constructor(private http: HttpClient) {}
 
   getFeelings(): Observable<Feeling[]> {
-    return this.http.get<Feeling[]>('http://localhost:4200/api/feelings').pipe(
+    return this.http.get<Feeling[]>(`${environment.url}/api/feelings`).pipe(
       map((feelings) => feelings.sort((a, b) => new Date(a.full_date).getTime() - new Date(b.full_date).getTime())),
       catchError((err) => {
         console.log(err.error.message);
