@@ -1,6 +1,7 @@
 import { DOCUMENT, Location } from '@angular/common';
 import { Inject, Injectable, LOCALE_ID, Renderer2 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { environment } from '@environments/environment';
 
 @Injectable({
@@ -18,9 +19,11 @@ export class SEOService {
 
   constructor(
     @Inject(DOCUMENT) private dom: Document,
+    @Inject(LOCALE_ID) private locale: string,
     private title: Title,
     private meta: Meta,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) {}
 
   setTitle(title?: string) {
@@ -39,14 +42,14 @@ export class SEOService {
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": ${this.defaultTitle},
+        "name": "${this.defaultTitle}",
         "author": {
           "@type": "Person",
           "@id": "#piotrbec"
         },
-        "image": ${this.imageUrl},
-        "url": ${environment.url},
-        "keywords": ${this.keywords}
+        "image": "${this.imageUrl}",
+        "url": "${environment.url}",
+        "keywords": "${this.keywords}"
       }`;
     renderer.appendChild(this.dom.head, script);
   }
@@ -74,7 +77,7 @@ export class SEOService {
     let link: HTMLLinkElement = renderer.createElement('link');
     link.setAttribute('rel', 'canonical');
     renderer.appendChild(this.dom.head, link);
-    link.setAttribute('href', this.dom.URL);
+    link.setAttribute('href', environment.url + '/' + this.locale + this.router.url);
   }
 
   setAlternateUrl(renderer: Renderer2) {
@@ -84,9 +87,9 @@ export class SEOService {
     languages.forEach((language) => {
       let url = basePath.replace(/\/(..)\/$/g, '/' + language + '/') + this.location.path().substring(1);
       if (url !== fullPath) {
-        this.addAlternateLink(renderer, url, language);
+        this.addAlternateLink(renderer, environment.url + url, language);
       } else if (fullPath === basePath && language !== basePath.replace(/\//g, '')) {
-        this.addAlternateLink(renderer, '/' + language, language);
+        this.addAlternateLink(renderer, environment.url + '/' + language, language);
       }
     });
   }
