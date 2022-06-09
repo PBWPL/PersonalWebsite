@@ -87,7 +87,7 @@ export function app(lang: string): express.Express {
 
             let properties = lines[i].replace('\n', '').split(/,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/g);
 
-            obj['full_date'] = new Date(`${properties[0]} ${properties[3]} GMT+0200`);
+            obj['full_date'] = new Date(`${properties[0]} ${properties[3]} GMT+0200`).toISOString();
             obj['mood'] = properties[4];
             obj['activities'] = properties[5].split(' | ').map((item) => item.trim());
             obj['note_title'] = properties[6] !== '""' ? properties[6].replace(/\"/g, '') : null;
