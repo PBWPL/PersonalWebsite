@@ -11,11 +11,11 @@ button {
 
 #feelings {
   .note {
-    ul {
+    ul > li {
       list-style: inside disc;
     }
 
-    li {
+    ol > li {
       list-style: inside decimal;
     }
   }
