@@ -6,21 +6,70 @@
         <source>Please enable JavaScript to continue using this application.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="appMessageConsoleHaveFun" datatype="html">
         <source>✨ Have a great day and have fun! ✨</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="appMessageConsoleQuote" datatype="html">
         <source>&quot;Whenever possible, steal code&quot; ~ Tom Duff</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutMeIntrodution" datatype="html">
+        <source>Introduction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutMeIAm" datatype="html">
+        <source>I&apos;m <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Piotr<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>. I&apos;m a <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Fullstack Developer<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutMeImproving" datatype="html">
+        <source> I keep improving my skills in a wide range of web development (<x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Front-end<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>, <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Back-end<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> and <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>DevOps<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>). So I able to create an application or a website from scratch to deploy its production version on server. I also graduated with a <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Bachelor of Science degree<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> in <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Computer Science<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> with a very good grade on my engineering diploma. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">22,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutMeSkills" datatype="html">
+        <source>Skills</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutMeStatement" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-center&quot;&gt;"/>Day by day, the truth of <x id="START_TAG_CITE" ctype="x-cite" equiv-text="&lt;cite&gt;"/>Socrates&apos;<x id="CLOSE_TAG_CITE" ctype="x-cite" equiv-text="&lt;/cite&gt;"/> statement<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_QUOTATION" ctype="x-q" equiv-text="&lt;q class=&quot;py-4 italic text-lg&quot;&gt;"/>I know that I know nothing<x id="CLOSE_QUOTATION" ctype="x-q" equiv-text="&lt;/q&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-center&quot;&gt;"/>confirms to me how much knowledge there is to acquire.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">65,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutMeEducation" datatype="html">
+        <source>Education</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutMeTimeline" datatype="html">
+        <source>Timeline</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutTitle" datatype="html">
@@ -131,17 +180,17 @@
         </context-group>
       </trans-unit>
       <trans-unit id="homeCardSource" datatype="html">
-        <source>Source</source>
+        <source>Source Code</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/portfolio/home/project-card/project-card.component.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homeProjectCardPreview" datatype="html">
         <source>Preview</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/portfolio/home/project-card/project-card.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="projectsCardWork" datatype="html">
@@ -152,17 +201,17 @@
         </context-group>
       </trans-unit>
       <trans-unit id="projectsCardSource" datatype="html">
-        <source>Source</source>
+        <source>Source Code</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="projectsCardPreview" datatype="html">
         <source>Preview</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="projectsMyProjects" datatype="html">
@@ -323,7 +372,7 @@
         <source>Peter Bec</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/services/seo.service.ts</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="seoDefaultDesc" datatype="html">
@@ -333,7 +382,7 @@
   he listens to music, reads books, plays guitar or runs.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/services/seo.service.ts</context>
-          <context context-type="linenumber">11,14</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
     </body>

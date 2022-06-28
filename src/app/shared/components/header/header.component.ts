@@ -5,6 +5,7 @@ import { Developer } from '@shared/interfaces/developer';
 import { DeveloperService } from '@shared/services/developer.service';
 import { LocalStorageService } from '@shared/services/local-storage.service';
 import { StyleManagerService } from '@shared/services/style-manager.service';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,7 @@ import { StyleManagerService } from '@shared/services/style-manager.service';
 })
 export class HeaderComponent implements OnInit {
   isBrowser: boolean;
+  isSmallScreen: boolean = this.breakpointObserver.isMatched('(min-width: 640px)');
   developer: Developer = this.developerService.getDeveloper();
 
   scrollPos: number = 0;
@@ -114,6 +116,7 @@ export class HeaderComponent implements OnInit {
     @Inject(PLATFORM_ID) platformId: string,
     private localStorageService: LocalStorageService,
     private styleManagerService: StyleManagerService,
+    private breakpointObserver: BreakpointObserver,
     private developerService: DeveloperService
   ) {
     this.isBrowser = isPlatformBrowser(platformId);

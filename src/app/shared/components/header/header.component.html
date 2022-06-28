@@ -15,7 +15,7 @@
           <div class="developer pl-16 min-h-[32px] lg:-ml-24">
             <div class="developer-name">
               <h1 class="hidden !font-semibold sm:inline-block" itemprop="name">
-                {{ developer.firstName + ' ' + developer.lastName }}
+                {{ isSmallScreen ? developer.firstName + ' ' + developer.lastName : developer.initials }}
               </h1>
               <h1 class="!font-semibold inline-block sm:hidden" itemprop="name">{{ developer.initials }}</h1>
             </div>

@@ -14,12 +14,12 @@
       </div>
       <mat-card (click)="preventClick($event)">
         <div class="pt-20 sm:pt-0">
-          <h2 class="pt-4 sm:pt-0">Introduction</h2>
-          <p>I'm <b>Piotr</b>. I'm a <b>Fullstack Developer</b>.</p>
+          <h2 i18n="@@aboutMeIntrodution" class="pt-4 sm:pt-0">Introduction</h2>
+          <p i18n="@@aboutMeIAm">I'm <b>Piotr</b>. I'm a <b>Fullstack Developer</b>.</p>
           <mat-icon svgIcon="pb-logo" ngClass="pb-logo" class="pb-logo !h-12 !w-auto"></mat-icon>
           <span class="lines-x"></span>
           <span class="lines-y"></span>
-          <p class="sm:pt-5">
+          <p i18n="@@aboutMeImproving" class="sm:pt-5">
             I keep improving my skills in a wide range of web development (<b>Front-end</b>, <b>Back-end</b> and
             <b>DevOps</b>).
             So I able to create an application or a website from scratch to deploy its production version on server.
@@ -33,7 +33,7 @@
     <section id="skills">
       <mat-card (click)="preventClick($event)">
         <mat-card-title>
-          <h2>Skills</h2>
+          <h2 i18n="@@aboutMeSkills">Skills</h2>
         </mat-card-title>
         <ul class="knowsAbout">
           <li class="pb-4">
@@ -53,7 +53,7 @@
             <span itemprop="knowsAbout" *ngFor="let ide of developer.knowsAbout.ides">{{ide}}</span>
           </li>
           <li class="pb-4">
-            <h3 class="!font-medium !mb-0">Software:</h3>
+            <h3 class="!font-medium !mb-0">Softwares:</h3>
             <span itemprop="knowsAbout" *ngFor="let software of developer.knowsAbout.softwares">{{software}}</span>
           </li>
           <li>
@@ -61,7 +61,7 @@
             <span itemprop="knowsAbout" *ngFor="let others of developer.knowsAbout.others">{{others}}</span>
           </li>
         </ul>
-        <p class="flex flex-col items-center !mt-4 p-4 border border-solid">
+        <p i18n="@@aboutMeStatement" class="flex flex-col items-center !mt-4 p-4 border border-solid">
           <span class="text-center">Day by day, the truth of <cite>Socrates'</cite> statement</span>
           <q class="py-4 italic text-lg">I know that I know nothing</q>
           <span class="text-center">confirms to me how much knowledge there is to acquire.</span>
@@ -72,7 +72,7 @@
     <section id="education">
       <mat-card (click)="preventClick($event)">
         <mat-card-title>
-          <h2>Education</h2>
+          <h2 i18n="@@aboutMeEducation">Education</h2>
         </mat-card-title>
         <ng-container *ngFor="let education of developer.education; last as last">
           <div class="flex flex-col sm:flex-wrap sm:flex-row">
@@ -102,7 +102,7 @@
     <section id="timeline">
       <mat-card (click)="preventClick($event)" class="!flex flex-col md:items-center md:self-center">
         <div class="border-4 border-solid bg-accent-800 border-accent-500 md:max-w-xs">
-          <h2 class="!m-0 p-2 text-center">Timeline</h2>
+          <h2 i18n="@@aboutMeTimeline" class="!m-0 p-2 text-center">Timeline</h2>
         </div>
         <about-timeline [items]="developer.works"></about-timeline>
         <div class="w-6 h-6 rounded-full bg-accent-800">

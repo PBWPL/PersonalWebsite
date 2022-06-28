@@ -5,15 +5,57 @@
       <trans-unit id="appMessageNoJS" datatype="html">
         <source>Please enable JavaScript to continue using this application.</source><target state="new">Bitte aktivieren Sie JavaScript, um diese Anwendung weiter nutzen zu können.</target>
         
-      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.ts</context><context context-type="linenumber">46</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.ts</context><context context-type="linenumber">47</context></context-group></trans-unit>
       <trans-unit id="appMessageConsoleHaveFun" datatype="html">
         <source>✨ Have a great day and have fun! ✨</source><target state="new">✨ Ich wünsche Ihnen einen schönen Tag und viel Spaß! ✨</target>
         
-      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.ts</context><context context-type="linenumber">56</context></context-group></trans-unit>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.ts</context><context context-type="linenumber">57</context></context-group></trans-unit>
       <trans-unit id="appMessageConsoleQuote" datatype="html">
         <source>"Whenever possible, steal code" ~ Tom Duff</source><target state="new">"Wann immer möglich, Code stehlen" ~ Tom Duff</target>
         
-      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.ts</context><context context-type="linenumber">57</context></context-group></trans-unit><trans-unit id="aboutTitle" datatype="html">
+      <context-group purpose="location"><context context-type="sourcefile">src/app/app.component.ts</context><context context-type="linenumber">58</context></context-group></trans-unit><trans-unit id="aboutMeIntrodution" datatype="html">
+        <source>Introduction</source><target state="new">Einführung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit><trans-unit id="aboutMeIAm" datatype="html">
+        <source>I'm <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Piotr<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>. I'm a <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Fullstack Developer<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>.</source><target state="new">Ich bin <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Piotr<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>. Ich bin ein <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Fullstack Developer<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit><trans-unit id="aboutMeImproving" datatype="html">
+        <source> I keep improving my skills in a wide range of web development (<x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Front-end<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>, <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Back-end<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> and <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>DevOps<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>). So I able to create an application or a website from scratch to deploy its production version on server. I also graduated with a <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Bachelor of Science degree<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> in <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Computer Science<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> with a very good grade on my engineering diploma. </source><target state="new"> Ich verbessere kontinuierlich meine Kompetenzen in einem breiten Spektrum der Webentwicklung (<x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Front-end<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>, <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Back-end<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> und <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>DevOps<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/>). So war ich in der Lage, eine Applikation oder eine Website von Grund auf zu entwickeln und ihre Produktionsversion auf dem Server bereitzustellen. Außerdem habe ich einen <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Ingenieurabschluss<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> in <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b>"/>Angewandter Informatik <x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b>"/> mit einer sehr guten Note im Ingenieurdiplom. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">22,28</context>
+        </context-group>
+      </trans-unit><trans-unit id="aboutMeSkills" datatype="html">
+        <source>Skills</source><target state="new">Fertigkeiten</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit><trans-unit id="aboutMeStatement" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-center&quot;>"/>Day by day, the truth of <x id="START_TAG_CITE" ctype="x-cite" equiv-text="&lt;cite>"/>Socrates'<x id="CLOSE_TAG_CITE" ctype="x-cite" equiv-text="&lt;/cite>"/> statement<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_QUOTATION" ctype="x-q" equiv-text="&lt;q class=&quot;py-4 italic text-lg&quot;>"/>I know that I know nothing<x id="CLOSE_QUOTATION" ctype="x-q" equiv-text="&lt;/q>"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-center&quot;>"/>confirms to me how much knowledge there is to acquire.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source><target state="new"><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-center&quot;>"/>Tag für Tag wird die Wahrheit von <x id="START_TAG_CITE" ctype="x-cite" equiv-text="&lt;cite>"/>Sokrates'<x id="CLOSE_TAG_CITE" ctype="x-cite" equiv-text="&lt;/cite>"/> Aussage<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/><x id="START_QUOTATION" ctype="x-q" equiv-text="&lt;q class=&quot;py-4 italic text-lg&quot;>"/>Ich weiß, dass ich nichts weiß<x id="CLOSE_QUOTATION" ctype="x-q" equiv-text="&lt;/q>"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;text-center&quot;>"/>bestätigt mir, wie viel Wissen es zu erwerben gibt.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">65,67</context>
+        </context-group>
+      </trans-unit><trans-unit id="aboutMeEducation" datatype="html">
+        <source>Education</source><target state="new">Bildung</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit><trans-unit id="aboutMeTimeline" datatype="html">
+        <source>Timeline</source><target state="new">Zeitleiste</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/about/about.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit><trans-unit id="aboutTitle" datatype="html">
         <source>About Me</source><target state="new">Über mich</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/portfolio/about/about.component.ts</context>
@@ -86,17 +128,11 @@
         
       <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/home.component.html</context><context context-type="linenumber">132</context></context-group></trans-unit><trans-unit id="homeCardSource" datatype="html">
         <source>Source Code</source><target state="new">Quellcode</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/portfolio/home/project-card/project-card.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit><trans-unit id="homeProjectCardPreview" datatype="html">
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/project-card/project-card.component.html</context><context context-type="linenumber">29</context></context-group></trans-unit><trans-unit id="homeProjectCardPreview" datatype="html">
         <source>Preview</source><target state="new">Vorschau</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/portfolio/home/project-card/project-card.component.html</context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-      </trans-unit><trans-unit id="projectsCardWork" datatype="html">
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/home/project-card/project-card.component.html</context><context context-type="linenumber">32</context></context-group></trans-unit><trans-unit id="projectsCardWork" datatype="html">
         <source> <x id="INTERPOLATION" equiv-text="{{ project.individual ? 'INDIVIDUAL WORK' : 'TEAM WORK' }}"/> </source><target state="new"> <x id="INTERPOLATION" equiv-text="{{ project.individual ? 'INDIVIDUAL WORK' : 'TEAM WORK' }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context>
@@ -104,17 +140,11 @@
         </context-group>
       </trans-unit><trans-unit id="projectsCardSource" datatype="html">
         <source>Source Code</source><target state="new">Quellcode</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-      </trans-unit><trans-unit id="projectsCardPreview" datatype="html">
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context><context context-type="linenumber">41</context></context-group></trans-unit><trans-unit id="projectsCardPreview" datatype="html">
         <source>Preview</source><target state="new">Vorschau</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context>
-          <context context-type="linenumber">40</context>
-        </context-group>
-      </trans-unit><trans-unit id="projectsMyProjects" datatype="html">
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/portfolio/projects/card/card.component.html</context><context context-type="linenumber">44</context></context-group></trans-unit><trans-unit id="projectsMyProjects" datatype="html">
         <source>My Projects</source><target state="new">Meine Projekte</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/portfolio/projects/projects.component.html</context>
@@ -178,11 +208,8 @@
       
       <trans-unit id="seoDefaultTitle" datatype="html">
         <source>Peter Bec</source><target state="new">Peter Bec</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/services/seo.service.ts</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-      </trans-unit>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/shared/services/seo.service.ts</context><context context-type="linenumber">11</context></context-group></trans-unit>
       <trans-unit id="seoDefaultDesc" datatype="html">
         <source>
   Peter Bec is a Fullstack Developer who improves his skills in a wide range of
@@ -190,11 +217,8 @@
   he listens to music, reads books, plays guitar or runs.</source><target state="new">Peter Bec ist ein Fullstack Developer, der seine Fähigkeiten in einem breiten Spektrum der
   Web-Entwicklung (Front-End, Back-End, DevOps). Wenn er nicht gerade programmiert,
   hört er Musik, liest Bücher, spielt Gitarre oder läuft.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/services/seo.service.ts</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-      </trans-unit>
+        
+      <context-group purpose="location"><context context-type="sourcefile">src/app/shared/services/seo.service.ts</context><context context-type="linenumber">12</context></context-group></trans-unit>
       <trans-unit id="developerFirstName" datatype="html">
         <source>Peter</source><target state="new">Peter</target>
         
